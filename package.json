@@ -1,0 +1,36 @@
+{
+    "name": "gmail_intfc",
+    "version": "0.0.1",
+    "description": "Node library for interacting with a gmail mailbox.",
+    "main": "index.js",
+    "scripts": {
+        "test": "jasmine specs/*"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/alflanagan/gmail_intfc.git"
+    },
+    "keywords": [
+        "mail",
+        "gmail",
+        "smtp"
+    ],
+    "author": "Adrian L. Flanagan",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/alflanagan/gmail_intfc/issues"
+    },
+    "homepage": "https://github.com/alflanagan/gmail_intfc#readme",
+    "dependencies": {
+        "xoauth2": "^1.2.0"
+    },
+    "scripts": {
+        "prepublish": "babel --minified --source-maps -d build -x .js index.js src/",
+        "clean": "rm -r build/*"
+    },
+    "devDependencies": {
+        "babel-cli": "^6.23.0",
+        "babel-preset-env": "^1.1.8",
+        "jasmine": "^2.5.3"
+    }
+}
