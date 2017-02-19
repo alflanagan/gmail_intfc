@@ -1,36 +1,38 @@
 {
-    "name": "gmail_intfc",
-    "version": "0.0.1",
-    "description": "Node library for interacting with a gmail mailbox.",
-    "main": "index.js",
-    "scripts": {
-        "test": "jasmine specs/*"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/alflanagan/gmail_intfc.git"
-    },
-    "keywords": [
-        "mail",
-        "gmail",
-        "smtp"
-    ],
-    "author": "Adrian L. Flanagan",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/alflanagan/gmail_intfc/issues"
-    },
-    "homepage": "https://github.com/alflanagan/gmail_intfc#readme",
-    "dependencies": {
-        "xoauth2": "^1.2.0"
-    },
-    "scripts": {
-        "prepublish": "babel --minified --source-maps -d build -x .js index.js src/",
-        "clean": "rm -r build/*"
-    },
-    "devDependencies": {
-        "babel-cli": "^6.23.0",
-        "babel-preset-env": "^1.1.8",
-        "jasmine": "^2.5.3"
-    }
+  "name": "mail-web-services",
+  "version": "0.0.1",
+  "description": "A Node.js library for storing and retrieving data about mail messages.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alflanagan/mail-web-services.git"
+  },
+  "keywords": [
+    "mail",
+    "gmail",
+    "smtp",
+    "nodejs",
+    "webservice"
+  ],
+  "author": "Adrian L. Flanagan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alflanagan/mail-web-services/issues"
+  },
+  "homepage": "https://github.com/alflanagan/mail-web-services#readme",
+  "dependencies": {
+    "xoauth2": "^1.2.0"
+  },
+  "scripts": {
+    "prepublish": "babel --minified --source-maps -d build -x .js index.js src/",
+    "clean": "rm -r build/*",
+    "test": "jasmine specs/*",
+    "validate-self": "jsonlint package.json --schema node_modules/json-schema/draft-04/schema  -q"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-preset-env": "^1.1.8",
+    "jasmine": "^2.5.3",
+    "json-schema": "^0.2.3"
+  }
 }
